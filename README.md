@@ -179,6 +179,10 @@ These are some previews of configurations possible with Sugar Candy.
 
 ## Legal Notice
 
+Modifications Copyright (C) 2026 ParkSnoopy.  
+
+The original copyright of Marian Arlt is retained.  
+
 Copyright (C) 2018 Marian Arlt.  
 
 Sugar Candy is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.  
@@ -186,17 +190,3 @@ Sugar Candy is free software: you can redistribute it and/or modify it under the
 Sugar Candy is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.  
 
 You should have received a copy of the GNU General Public License along with Sugar Candy. If not, see <https://www.gnu.org/licenses/>.
-
-### Other awesome projects
-
-- [Chili—the hottest login theme for KDE Plasma](https://www.opendesktop.org/p/1214121)
-- [Chili stand-alone fork for SDDM only](https://www.opendesktop.org/p/1240784)
-- [Flat OSX like aurorae window decorations for your Linux desktop](https://www.opendesktop.org/p/1199822) and [its high contrast version](https://www.opendesktop.org/p/1246756)
-- [Finely crafted folder icons for Linux](https://www.opendesktop.org/p/1228310)
-- [Inline clock widget for KDE Plasma](https://www.opendesktop.org/p/1245902)
-
-### Motivate a developer
-
-In the past years I have spent quite some hours on open source projects. If you are the type of person who digs attention to detail, know how much work is involved in it and/or simply likes to support makers with a coffee or a beer I would greatly appreciate your donation on my [PayPayl](https://www.paypal.me/marianarlt) account.  
-Alternatively downloading my themes directly from opendesktop or with the kde sddm system settings module will at least help me a little to be able to attend your issues and requests.  
-Please consider helping developers you think are worth a penny or two, literally.
