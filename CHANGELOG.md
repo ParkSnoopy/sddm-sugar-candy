@@ -1,6 +1,9 @@
 # Changelog
 
 ## [1.6] - 2026-11-05
+### Added
+- Each release now also contains one ready-made theme archive per preview image (for example `sugar-candy-screen-padding-1.6.tar.gz`). Install one from the SDDM settings and pick it by its preview. The presets are in `Presets/`.
+
 ### Changed
 - **Breaking:** The theme now targets Qt6 and runs only in `sddm-greeter-qt6` (SDDM >= 0.21, Qt >= 6.5). `metadata.desktop` sets `QtVersion=6`.
 - Replaced `QtGraphicalEffects` with `QtQuick.Effects` (`MultiEffect`) for the background blur and the popup shadows. The blur and shadow values are calibrated to match the old look.

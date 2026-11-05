@@ -34,20 +34,14 @@ jobs:
             exit 1
           fi
 
-      - name: Build the theme archive
-        run: |
-          mkdir -p dist/sugar-candy
-          cp -r Assets Backgrounds Components Previews \
-            Main.qml theme.conf metadata.desktop \
-            AUTHORS CHANGELOG.md COPYING CREDITS README.md \
-            dist/sugar-candy/
-          tar -czf "sugar-candy-${VERSION}.tar.gz" -C dist sugar-candy
+      - name: Build the theme archives
+        run: ./Scripts/build-release.sh
 
       - name: Publish the release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" "sugar-candy-${VERSION}.tar.gz" \
+          gh release create "$GITHUB_REF_NAME" Dist/*.tar.gz \
             --title "Sugar Candy ${VERSION}" \
             --notes-file release-notes.md \
             --verify-tag

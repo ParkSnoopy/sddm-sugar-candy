@@ -21,6 +21,12 @@ If you are on [KDE Plasma](https://www.kde.org/plasma-desktop)—by default [Man
 
 If for some reason you cannot find the category named "Login Screen (SDDM)" in your system settings then you are missing the module `sddm-kcm`. Install this little helper with your package manager first. You will be grateful you did.
 
+#### Ready-made variants
+
+Every [release](https://github.com/ParkSnoopy/sddm-sugar-candy/releases) has one extra archive per preview image shown under [Examples](#examples), for example `sugar-candy-screen-padding-<version>.tar.gz`. Each one is a complete theme with that look already set in its `theme.conf`.  
+
+In the system settings under "Login Screen (SDDM)" click "Install From File…", choose the archive and apply. The theme then shows up in the list with its preview image, so you can switch looks by picking another one. The values of each variant are in the `Presets` folder.  
+
 #### From other desktop environments
 
 [Download the tar archive from opendesktop](https://www.opendesktop.org/p/1312658) and extract the contents to the theme directory of SDDM *(change the path for the downloaded file if necessary)*:
