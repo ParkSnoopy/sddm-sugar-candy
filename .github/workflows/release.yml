@@ -17,7 +17,7 @@ jobs:
       - name: Check that the tag matches the theme version
         run: |
           version=$(sed -n 's/^Version=//p' metadata.desktop)
-          if [ "${GITHUB_REF_NAME}" != "v${version}" ]; then
+          if [ "$GITHUB_REF_NAME" != "v${version}" ]; then
             echo "Tag ${GITHUB_REF_NAME} does not match Version=${version} in metadata.desktop" >&2
             exit 1
           fi
@@ -25,7 +25,7 @@ jobs:
 
       - name: Extract the changelog entry
         run: |
-          awk -v v="${VERSION}" '
+          awk -v v="$VERSION" '
             /^## \[/ { if (found) exit; found = index($0, "## [" v "]") == 1; next }
             found
           ' CHANGELOG.md > release-notes.md
@@ -47,7 +47,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" "sugar-candy-${VERSION}.tar.gz" \
+          gh release create "$GITHUB_REF_NAME" "sugar-candy-${VERSION}.tar.gz" \
             --title "Sugar Candy ${VERSION}" \
             --notes-file release-notes.md \
             --verify-tag
