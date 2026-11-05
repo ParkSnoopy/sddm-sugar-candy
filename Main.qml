@@ -22,10 +22,10 @@
 // along with SDDM Sugar Candy. If not, see <https://www.gnu.org/licenses/>
 //
 
-import QtQuick 2.11
-import QtQuick.Layouts 1.11
-import QtQuick.Controls 2.4
-import QtGraphicalEffects 1.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import QtQuick.Effects
 import "Components"
 
 Pane {
@@ -258,15 +258,18 @@ Pane {
             visible: config.FullBlur == "true" || config.PartialBlur == "true" ? true : false
         }
 
-        GaussianBlur {
+        MultiEffect {
             id: blur
 
             height: parent.height
             width: config.FullBlur == "true" ? parent.width : form.width
             source: config.FullBlur == "true" ? backgroundImage : blurMask
-            radius: config.BlurRadius
-            samples: config.BlurRadius * 2 + 1
-            cached: true
+            autoPaddingEnabled: false
+            blurEnabled: true
+            blurMax: 64
+            // Matches the old GaussianBlur radius of BlurRadius
+            blur: Math.min(1, Math.pow(config.BlurRadius / 120, 0.7))
+            blurMultiplier: Math.max(1, config.BlurRadius / 100)
             anchors.centerIn: config.FullBlur == "true" ? parent : form
             visible: config.FullBlur == "true" || config.PartialBlur == "true" ? true : false
         }

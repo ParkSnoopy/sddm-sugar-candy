@@ -22,9 +22,9 @@
 // along with SDDM Sugar Candy. If not, see <https://www.gnu.org/licenses/>
 //
 
-import QtQuick 2.11
-import QtQuick.Controls 2.4
-import QtGraphicalEffects 1.0
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Effects
 
 Item {
     id: sessionButton
@@ -35,14 +35,14 @@ Item {
     property var selectedSession: selectSession.currentIndex
     property string textConstantSession
     property int loginButtonWidth
-    property Control exposeSession: selectSession
+    property Item exposeSession: selectSession
 
     ComboBox {
         id: selectSession
 
         hoverEnabled: true
         anchors.left: parent.left
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if (event.key == Qt.Key_Up && loginButton.state != "enabled" && !popup.opened)
                 revealSecret.focus = true,
                 revealSecret.state = "focused",
@@ -60,7 +60,7 @@ Item {
         }
 
         model: sessionModel
-        currentIndex: model.lastIndex
+        currentIndex: sessionModel.lastIndex
         textRole: "name"
 
         delegate: ItemDelegate {
@@ -125,14 +125,16 @@ Item {
                 radius: config.RoundCorners / 2
                 color: config.BackgroundColor
                 layer.enabled: true
-                layer.effect: DropShadow {
-                    transparentBorder: true
-                    horizontalOffset: 0
-                    verticalOffset: 0
-                    radius: 20 * config.InterfaceShadowSize
-                    samples: 41 * config.InterfaceShadowSize
-                    cached: true
-                    color: Qt.hsla(0,0,0,config.InterfaceShadowOpacity)
+                layer.effect: MultiEffect {
+                    autoPaddingEnabled: true
+                    shadowEnabled: true
+                    shadowHorizontalOffset: 0
+                    shadowVerticalOffset: 0
+                    blurMax: 64
+                    // Matches the old DropShadow radius of 20 * InterfaceShadowSize
+                    shadowBlur: Math.min(1, Math.sqrt(20 * config.InterfaceShadowSize / 120))
+                    blurMultiplier: Math.max(1, 20 * config.InterfaceShadowSize / 100)
+                    shadowColor: Qt.hsla(0,0,0,config.InterfaceShadowOpacity)
                 }
             }
 

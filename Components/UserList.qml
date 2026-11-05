@@ -22,9 +22,9 @@
 // along with SDDM Sugar Candy. If not, see <https://www.gnu.org/licenses/>
 //
 
-import QtQuick 2.11
-import QtQuick.Controls 2.4
-import QtGraphicalEffects 1.0
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Effects
 
 Item {
     id: usernameField
@@ -46,7 +46,7 @@ Item {
         z: 2
 
         model: userModel
-        currentIndex: model.lastIndex
+        currentIndex: userModel.lastIndex
         textRole: "name"
         hoverEnabled: true
         onActivated: {
@@ -80,6 +80,7 @@ Item {
                 icon.height: parent.height * 0.25
                 icon.width: parent.height * 0.25
                 enabled: false
+                flat: true
                 icon.color: root.palette.text
                 icon.source: Qt.resolvedUrl("../Assets/User.svgz")
         }
@@ -108,14 +109,15 @@ Item {
                 radius: 10
                 color: root.palette.window
                 layer.enabled: true
-                layer.effect: DropShadow {
-                    transparentBorder: true
-                    horizontalOffset: 0
-                    verticalOffset: 0
-                    radius: 100
-                    samples: 201
-                    cached: true
-                    color: "#88000000"
+                layer.effect: MultiEffect {
+                    autoPaddingEnabled: true
+                    shadowEnabled: true
+                    shadowHorizontalOffset: 0
+                    shadowVerticalOffset: 0
+                    blurMax: 64
+                    // Matches the old DropShadow radius of 100
+                    shadowBlur: 0.9
+                    shadowColor: "#88000000"
                 }
             }
 

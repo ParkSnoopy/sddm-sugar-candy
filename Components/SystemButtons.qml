@@ -22,9 +22,9 @@
 // along with SDDM Sugar Candy. If not, see <https://www.gnu.org/licenses/>
 //
 
-import QtQuick 2.11
-import QtQuick.Layouts 1.11
-import QtQuick.Controls 2.4
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
 
 RowLayout {
 
@@ -35,7 +35,7 @@ RowLayout {
     property var reboot: ["Reboot", config.TranslateReboot || textConstants.reboot, sddm.canReboot]
     property var shutdown: ["Shutdown", config.TranslateShutdown || textConstants.shutdown, sddm.canPowerOff]
 
-    property Control exposedSession
+    property Item exposedSession
 
     Repeater {
 

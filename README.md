@@ -36,25 +36,25 @@ In the `[Theme]` section simply add the themes name to this line: `Current=sugar
 
 #### Dependencies
 
-[SDDM  >= 0.18](https://github.com/sddm/sddm) & [Qt5 >= 5.11](https://doc.qt.io/archives/qt-5.11/index.html)  
-including: [`Qt Quick Controls 2`](https://doc.qt.io/archives/qt-5.11/qtquickcontrols2-index.html), [`Qt Graphical Effects`](https://doc.qt.io/archives/qt-5.11/qtgraphicaleffects-index.html), [`Qt SVG`](https://doc.qt.io/archives/qt-5.11/qtsvg-index.html), [`Qt Quick Layouts`](https://doc.qt.io/archives/qt-5.11/qtquicklayouts-index.html) each `>= 5.11`—*see below for distro specific package names*  
+[SDDM  >= 0.21](https://github.com/sddm/sddm) built with Qt6 (`sddm-greeter-qt6`) & [Qt >= 6.5](https://doc.qt.io/qt-6/index.html)  
+including: [`Qt Quick Controls`](https://doc.qt.io/qt-6/qtquickcontrols-index.html), [`Qt Quick Effects`](https://doc.qt.io/qt-6/qtquick-effects-qmlmodule.html), [`Qt SVG`](https://doc.qt.io/qt-6/qtsvg-index.html), [`Qt Quick Layouts`](https://doc.qt.io/qt-6/qtquicklayouts-index.html) each `>= 6.5`—*see below for distro specific package names*  
 
 *Make sure these are installed with their required version or higher! SDDM might need an enabled system service/daemon to work. This is often done automatically during installation. Take note that a lot of standard release distros like Debian, Mint, MX, Elementary, Deepin or Ubuntu LTS are still on earlier versions. If in doubt ask in your distros forums.*  
 
 **Debian based** distros using the **APT** package manager:  
 *(Ubuntu/Kubuntu/Kali/Neon/antiX etc.)*  
-`sudo apt install --no-install-recommends sddm qml-module-qtquick-layouts qml-module-qtgraphicaleffects qml-module-qtquick-controls2 libqt5svg5`
+`sudo apt install --no-install-recommends sddm qml6-module-qtquick-layouts qml6-module-qtquick-controls qml6-module-qtquick-effects libqt6svg6`
 
 **Arch based** distros using the **pacman** package manger:  
 *(Obarun/Artix/Manjaro/KaOS/Chakra etc.)*  
-`sudo pacman -S --needed sddm qt5-graphicaleffects qt5-quickcontrols2 qt5-svg`  
+`sudo pacman -S --needed sddm qt6-declarative qt6-svg`  
 
 **openSUSE** using the **zypper** package manager:
-`sudo zypper install sddm libqt5-qtgraphicaleffects libqt5-qtquickcontrols2 libQt5Svg5 libQt5Svg5`
+`sudo zypper install sddm-qt6 qt6-declarative-imports libQt6Svg6`
 
 **Red Hat** based distros using the **dnf** package manager:  
 *(Fedora/Mageia/RHEL/CentOS)*  
-`sudo dnf install sddm qt5-qtgraphicaleffects qt5-qtquickcontrols2 qt5-qtsvg`
+`sudo dnf install sddm qt6-qtdeclarative qt6-qtsvg`
 
 ## Configuration
 
