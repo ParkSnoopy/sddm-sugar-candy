@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.7] - 2026-11-06
+### Changed
+- **Breaking:** Renamed `Backgrounds/Undraw.svg` to `Backgrounds/Illustration.svg` and replaced it with an original illustration. Update `Background=` in your `theme.conf` if you used the old name.
+- Replaced every asset of unclear license. The background photographs are now public domain or CC0 photographs, and the user icon, the four system button icons (suspend, hibernate, reboot, shutdown), the illustration and `Rocks.jpg` are original work. All sources are listed in `CREDITS`.
+- Replaced all images in `Previews` with captures that use the new assets.
+
+### Removed
+- Removed `Backgrounds/Sunset.jpg` because its license is unknown. The Full Blur variant now uses `Desert.jpg`.
+
 ## [1.6] - 2026-11-05
 ### Added
 - Each release now also contains one ready-made theme archive per preview image (for example `sugar-candy-screen-padding-left-1.6.tar.gz`). Install one from the SDDM settings and pick it by its preview. The presets are in `Presets/`.
@@ -7,7 +16,6 @@
 - Renamed the previews `PartialBlur`, `ScreenPadding`, `ScaleImageCropped` and `ForceRightToLeft` to `PartialBlurLeft`, `ScreenPaddingLeft`, `ScaleImageCroppedLeft` and `ArabicLeft`, and added the matching right versions.
 
 ### Changed
-- Replaced every asset of unclear license. The background photographs are now public domain or CC0 photographs, and the user icon, the illustration (renamed from `Undraw.svg` to `Illustration.svg`) and `Rocks.jpg` are original work. All sources are listed in `CREDITS`.
 - **Breaking:** The theme now targets Qt6 and runs only in `sddm-greeter-qt6` (SDDM >= 0.21, Qt >= 6.5). `metadata.desktop` sets `QtVersion=6`.
 - Replaced `QtGraphicalEffects` with `QtQuick.Effects` (`MultiEffect`) for the background blur and the popup shadows. The blur and shadow values are calibrated to match the old look.
 - Switched all QML imports to the versionless Qt6 form.

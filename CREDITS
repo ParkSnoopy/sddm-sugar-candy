@@ -2,11 +2,9 @@ Every asset in this theme is either original work, released under the same
 license as the theme (GPL-3.0-or-later), or a public domain / CC0 photograph.
 No asset requires attribution; the sources are listed for transparency.
 
-Original Sugar Candy artwork (Marian Arlt, 2018)
-/Assets/Suspend.svgz, /Assets/Hibernate.svgz, /Assets/Reboot.svgz, /Assets/Shutdown.svgz
-
-Original work added in 1.6 (ParkSnoopy)
+Original work (ParkSnoopy, 1.7)
 /Assets/User.svgz
+/Assets/Suspend.svgz, /Assets/Hibernate.svgz, /Assets/Reboot.svgz, /Assets/Shutdown.svgz
 /Backgrounds/Illustration.svg
 /Backgrounds/Rocks.jpg (procedurally generated texture)
 
