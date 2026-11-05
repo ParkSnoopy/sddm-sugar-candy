@@ -70,6 +70,9 @@ Item {
             }
         }
 
+        // Qt6 draws the current user name here by default; the icon replaces it
+        contentItem: Item {}
+
         indicator: Button {
                 id: usernameIcon
                 width: selectUser.height * 0.8
