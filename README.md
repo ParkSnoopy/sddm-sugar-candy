@@ -1,6 +1,6 @@
 
 
-![Screenshot of the interface of the Sugar Candy theme for SDDM](Previews/PartialBlur.png "The default interface of the Sugar Candy theme for SDDM")
+![Screenshot of the interface of the Sugar Candy theme for SDDM](Previews/PartialBlurLeft.png "The default interface of the Sugar Candy theme for SDDM")
 
 # Sugar Candy login theme for SDDM
 
@@ -23,7 +23,7 @@ If for some reason you cannot find the category named "Login Screen (SDDM)" in y
 
 #### Ready-made variants
 
-Every [release](https://github.com/ParkSnoopy/sddm-sugar-candy/releases) has one extra archive per preview image shown under [Examples](#examples), for example `sugar-candy-screen-padding-<version>.tar.gz`. Each one is a complete theme with that look already set in its `theme.conf`.  
+Every [release](https://github.com/ParkSnoopy/sddm-sugar-candy/releases) has one extra archive per preview image shown under [Examples](#examples), for example `sugar-candy-screen-padding-left-<version>.tar.gz` and `sugar-candy-screen-padding-right-<version>.tar.gz`. Each one is a complete theme with that look already set in its `theme.conf`.  
 
 In the system settings under "Login Screen (SDDM)" click "Install From File…", choose the archive and apply. The theme then shows up in the list with its preview image, so you can switch looks by picking another one. The values of each variant are in the `Presets` folder.  
 
@@ -176,12 +176,17 @@ And as if that wouldn't still be enough you can translate every single button an
 *These don't necessarily need to translate anything. You can enter whatever you want here.*  
 
 ## Examples
-These are some previews of configurations possible with Sugar Candy.
-![Screenshot of Sugar Candy using an illustration as background.](Previews/ScaleImageCropped.png "An SVG illustration used as background")
-![Screenshot of Sugar Candy having a padding around the whole screen.](Previews/ScreenPadding.png "Using padding for the whole screen")
-![Screenshot of Sugar Candy with a right to left layout.](Previews/ForceRightToLeft.png "Right to left layout")
-![Screenshot of Sugar Candy with fully blurred background.](Previews/FullBlur.png "With fully blurred background")
-![Screenshot of Sugar Candy selection popup.](Previews/InterfacePopup.png "Interface popup")
+These are some previews of configurations possible with Sugar Candy. Every preview is also a ready-made theme, see [Ready-made variants](#ready-made-variants). Themes with a centered form have no left or right version.
+
+| Left | Right |
+|:---:|:---:|
+| ![Partial Blur Left](Previews/PartialBlurLeft.png)<br>**Partial Blur Left** | ![Partial Blur Right](Previews/PartialBlurRight.png)<br>**Partial Blur Right** |
+| ![Screen Padding Left](Previews/ScreenPaddingLeft.png)<br>**Screen Padding Left** | ![Screen Padding Right](Previews/ScreenPaddingRight.png)<br>**Screen Padding Right** |
+| ![Scale Image Cropped Left](Previews/ScaleImageCroppedLeft.png)<br>**Scale Image Cropped Left** | ![Scale Image Cropped Right](Previews/ScaleImageCroppedRight.png)<br>**Scale Image Cropped Right** |
+| ![Arabic Left](Previews/ArabicLeft.png)<br>**Arabic Left** | ![Arabic Right](Previews/ArabicRight.png)<br>**Arabic Right** |
+| ![Form Position](Previews/FormPosition.png)<br>**Form Position** | |
+| ![Full Blur](Previews/FullBlur.png)<br>**Full Blur** | |
+| ![Interface Popup](Previews/InterfacePopup.png)<br>**Interface Popup** | |
 
 ## Legal Notice
 

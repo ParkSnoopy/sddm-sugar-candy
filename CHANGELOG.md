@@ -2,7 +2,9 @@
 
 ## [1.6] - 2026-11-05
 ### Added
-- Each release now also contains one ready-made theme archive per preview image (for example `sugar-candy-screen-padding-1.6.tar.gz`). Install one from the SDDM settings and pick it by its preview. The presets are in `Presets/`.
+- Each release now also contains one ready-made theme archive per preview image (for example `sugar-candy-screen-padding-left-1.6.tar.gz`). Install one from the SDDM settings and pick it by its preview. The presets are in `Presets/`.
+- Every preview with the form on one side now has a left and a right version (`FormPosition="left"` and `FormPosition="right"`). Previews with a centered form have one version.
+- Renamed the previews `PartialBlur`, `ScreenPadding`, `ScaleImageCropped` and `ForceRightToLeft` to `PartialBlurLeft`, `ScreenPaddingLeft`, `ScaleImageCroppedLeft` and `ArabicLeft`, and added the matching right versions.
 
 ### Changed
 - **Breaking:** The theme now targets Qt6 and runs only in `sddm-greeter-qt6` (SDDM >= 0.21, Qt >= 6.5). `metadata.desktop` sets `QtVersion=6`.
