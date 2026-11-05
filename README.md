@@ -68,13 +68,13 @@ The sugar series is **extremely customizable** by editing its included `theme.co
 And as if that wouldn't still be enough you can translate every single button and label because SDDM is still lacking behind with localization and clearly [needs your help](https://github.com/sddm/sddm/wiki/Localization)!
 
 **Background="Backgrounds/Mountain.jpg"**  
-*Path relative to the theme root directory. Most standard image file formats are allowed including support for transparency. (e.g. background.jpeg/illustration.GIF/Foto.png/undraw.svgz)*  
+*Path relative to the theme root directory. Most standard image file formats are allowed including support for transparency. (e.g. background.jpeg/illustration.GIF/Foto.png/illustration.svgz)*  
 
 **DimBackgroundImage="0.0"**  
 *Double between 0 and 1 used for the alpha channel of a darkening overlay. Use to darken your background image on the fly.*  
 
 **ScaleImageCropped="true"**  
-*Whether the image should be cropped when scaled proportionally. Setting this to false will fit the whole image instead, possibly leaving white space. This can be exploited beautifully with illustrations (try it with "undraw.svg" included in the theme).*  
+*Whether the image should be cropped when scaled proportionally. Setting this to false will fit the whole image instead, possibly leaving white space. This can be exploited beautifully with illustrations (try it with "Illustration.svg" included in the theme).*  
 
 **ScreenWidth="1440"**  
 **ScreenHeight="900"**  
