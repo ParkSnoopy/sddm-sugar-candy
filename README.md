@@ -176,14 +176,14 @@ And as if that wouldn't still be enough you can translate every single button an
 *These don't necessarily need to translate anything. You can enter whatever you want here.*  
 
 ## Examples
-These are some previews of configurations possible with Sugar Candy. Every preview is also a ready-made theme, see [Ready-made variants](#ready-made-variants). Themes with a centered form have no left or right version.
+These are some previews of configurations possible with Sugar Candy. Every preview except the locale example is also a ready-made theme, see [Ready-made variants](#ready-made-variants). The locale example is the Partial Blur theme with only the `Locale` and the translation keys changed, its values are in the `Examples` folder. Themes with a centered form have no left or right version.
 
 | Left | Right |
 |:---:|:---:|
 | ![Partial Blur Left](Previews/PartialBlurLeft.png)<br>**Partial Blur Left** | ![Partial Blur Right](Previews/PartialBlurRight.png)<br>**Partial Blur Right** |
 | ![Screen Padding Left](Previews/ScreenPaddingLeft.png)<br>**Screen Padding Left** | ![Screen Padding Right](Previews/ScreenPaddingRight.png)<br>**Screen Padding Right** |
 | ![Scale Image Cropped Left](Previews/ScaleImageCroppedLeft.png)<br>**Scale Image Cropped Left** | ![Scale Image Cropped Right](Previews/ScaleImageCroppedRight.png)<br>**Scale Image Cropped Right** |
-| ![Arabic Left](Previews/ArabicLeft.png)<br>**Arabic Left** | ![Arabic Right](Previews/ArabicRight.png)<br>**Arabic Right** |
+| ![Partial Blur (Locale=ko_KR.UTF-8) Left](Previews/PartialBlurKoreanLeft.png)<br>**Partial Blur (Locale=ko_KR.UTF-8) Left** | ![Partial Blur (Locale=ko_KR.UTF-8) Right](Previews/PartialBlurKoreanRight.png)<br>**Partial Blur (Locale=ko_KR.UTF-8) Right** |
 | ![Form Position](Previews/FormPosition.png)<br>**Form Position** | |
 | ![Full Blur](Previews/FullBlur.png)<br>**Full Blur** | |
 | ![Interface Popup](Previews/InterfacePopup.png)<br>**Interface Popup** | |

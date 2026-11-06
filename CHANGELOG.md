@@ -7,6 +7,7 @@
 - Replaced all images in `Previews` with captures that use the new assets.
 
 ### Removed
+- Removed the `Arabic Left` and `Arabic Right` release archives. The Examples section now shows Partial Blur with `Locale="ko_KR.UTF-8"` instead, and its values are in `Examples/` (not released as a theme).
 - Removed `Backgrounds/Sunset.jpg` because its license is unknown. The Full Blur variant now uses `Desert.jpg`.
 
 ## [1.6] - 2026-11-05
