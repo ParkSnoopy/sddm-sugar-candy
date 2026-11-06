@@ -109,6 +109,8 @@ Pane {
 
         Button {
             id: vkb
+            // A click must not take focus from the text field the keyboard types into
+            focusPolicy: Qt.TabFocus
             onClicked: virtualKeyboard.switchState()
             visible: virtualKeyboard.status == Loader.Ready && config.ForceHideVirtualKeyboardButton == "false"
             anchors.bottom: parent.bottom

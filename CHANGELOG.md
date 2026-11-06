@@ -1,5 +1,12 @@
 # Changelog
 
+## [HEAD]
+### Fixed
+- The virtual keyboard now types into the password field. Clicking the "Virtual Keyboard" button took the focus from the text field, so the keys went nowhere.
+
+### Removed
+- Removed the `Arabic Left` and `Arabic Right` release archives. The Examples section now shows Partial Blur with `Locale="ko_KR.UTF-8"` instead, and its values are in `Examples/` (not released as a theme).
+
 ## [1.7] - 2026-11-06
 ### Changed
 - **Breaking:** Renamed `Backgrounds/Undraw.svg` to `Backgrounds/Illustration.svg` and replaced it with an original illustration. Update `Background=` in your `theme.conf` if you used the old name.
@@ -7,7 +14,6 @@
 - Replaced all images in `Previews` with captures that use the new assets.
 
 ### Removed
-- Removed the `Arabic Left` and `Arabic Right` release archives. The Examples section now shows Partial Blur with `Locale="ko_KR.UTF-8"` instead, and its values are in `Examples/` (not released as a theme).
 - Removed `Backgrounds/Sunset.jpg` because its license is unknown. The Full Blur variant now uses `Desert.jpg`.
 
 ## [1.6] - 2026-11-05
