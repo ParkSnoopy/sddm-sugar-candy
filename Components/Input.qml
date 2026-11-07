@@ -34,6 +34,12 @@ Column {
     property Item exposeSession: sessionSelect.exposeSession
     property bool failed
 
+    // The virtual keyboard only opens for a focused text field
+    function focusTextField() {
+        if (!username.activeFocus && !password.activeFocus)
+            (username.text == "" ? username : password).forceActiveFocus()
+    }
+
     Item {
         id: usernameField
 

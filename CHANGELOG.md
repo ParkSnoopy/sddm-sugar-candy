@@ -3,6 +3,7 @@
 ## [HEAD]
 ### Fixed
 - The virtual keyboard now types into the password field. Clicking the "Virtual Keyboard" button took the focus from the text field, so the keys went nowhere.
+- The virtual keyboard now opens when no text field has focus. Before, the button moved the form up but no keyboard appeared. The button now focuses the username field if it is empty, else the password field.
 
 ### Removed
 - Removed the `Arabic Left` and `Arabic Right` release archives. The Examples section now shows Partial Blur with `Locale="ko_KR.UTF-8"` instead, and its values are in `Examples/` (not released as a theme).

@@ -36,6 +36,8 @@ ColumnLayout {
     property alias clockVisibility: clock.visible
     property bool virtualKeyboardActive
 
+    function focusTextField() { input.focusTextField() }
+
     Clock {
         id: clock
         Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom

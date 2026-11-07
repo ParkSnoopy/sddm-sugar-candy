@@ -136,7 +136,11 @@ Pane {
             onKeyboardActiveChanged: keyboardActive ? state = "visible" : state = "hidden"
             width: parent.width
             z: 1
-            function switchState() { state = state == "hidden" ? "visible" : "hidden" }
+            function switchState() {
+                if (state == "hidden")
+                    form.focusTextField()
+                state = state == "hidden" ? "visible" : "hidden"
+            }
             states: [
                 State {
                     name: "visible"
