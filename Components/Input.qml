@@ -34,6 +34,21 @@ Column {
     property Item exposeSession: sessionSelect.exposeSession
     property bool failed
 
+    // Typed text in a focused field uses the accent color unless that color is
+    // nearly invisible on the form color (contrast below 2:1), then the main text color
+    readonly property color focusedTextColor: contrast(root.palette.highlight, root.palette.window) >= 2
+                                              ? root.palette.highlight : root.palette.text
+
+    function luminance(c) {
+        function channel(v) { return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4) }
+        return 0.2126 * channel(c.r) + 0.7152 * channel(c.g) + 0.0722 * channel(c.b)
+    }
+
+    function contrast(a, b) {
+        var la = luminance(a), lb = luminance(b)
+        return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05)
+    }
+
     // The virtual keyboard only opens for a focused text field
     function focusTextField() {
         if (!username.activeFocus && !password.activeFocus)
@@ -225,7 +240,7 @@ Column {
                     }
                     PropertyChanges {
                         target: username
-                        color: root.palette.highlight
+                        color: inputContainer.focusedTextColor
                     }
                 }
             ]
@@ -272,7 +287,7 @@ Column {
                 }
                 PropertyChanges {
                     target: password
-                    color: root.palette.highlight
+                    color: inputContainer.focusedTextColor
                 }
             }
         ]

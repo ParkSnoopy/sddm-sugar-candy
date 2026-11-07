@@ -143,6 +143,7 @@ And as if that wouldn't still be enough you can translate every single button an
 
 **ForceHideVirtualKeyboardButton="false"**  
 *Do not show the button for the virtual keyboard at all. This will completely disable functionality for the virtual keyboard even if it is installed and activated in sddm.conf*  
+*On X11 the button opens Qt Virtual Keyboard. On Wayland SDDM does not load Qt Virtual Keyboard, so the button asks KWin to show its keyboard instead. This needs Plasma and an input method in KWin (for example `--inputmethod` in `CompositorCommand`). Without one the button is hidden.*  
 
 **ForceHideSystemButtons="false"**  
 *Completely disable and hide any power buttons on the greeter.*  

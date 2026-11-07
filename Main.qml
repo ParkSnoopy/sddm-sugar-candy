@@ -48,6 +48,9 @@ Pane {
     font.pointSize: config.FontSize !== "" ? config.FontSize : parseInt(height / 80)
     focus: true
 
+    // SDDM does not load Qt Virtual Keyboard on Wayland, the compositor draws the keyboard there
+    readonly property bool onWayland: Qt.platform.pluginName.startsWith("wayland")
+
     property bool leftleft: config.HaveFormBackground == "true" &&
                             config.PartialBlur == "false" &&
                             config.FormPosition == "left" &&
@@ -111,8 +114,17 @@ Pane {
             id: vkb
             // A click must not take focus from the text field the keyboard types into
             focusPolicy: Qt.TabFocus
-            onClicked: virtualKeyboard.switchState()
-            visible: virtualKeyboard.status == Loader.Ready && config.ForceHideVirtualKeyboardButton == "false"
+            onClicked: {
+                if (root.onWayland) {
+                    form.focusTextField()
+                    kwinKeyboard.item.toggle()
+                } else {
+                    virtualKeyboard.switchState()
+                }
+            }
+            visible: (root.onWayland ? kwinKeyboard.item !== null && kwinKeyboard.item.available
+                                     : virtualKeyboard.status == Loader.Ready)
+                     && config.ForceHideVirtualKeyboardButton == "false"
             anchors.bottom: parent.bottom
             anchors.bottomMargin: implicitHeight
             anchors.horizontalCenter: form.horizontalCenter
@@ -129,7 +141,14 @@ Pane {
         }
 
         Loader {
+            id: kwinKeyboard
+            active: root.onWayland
+            source: "Components/KWinVirtualKeyboard.qml"
+        }
+
+        Loader {
             id: virtualKeyboard
+            active: !root.onWayland
             source: "Components/VirtualKeyboard.qml"
             state: "hidden"
             property bool keyboardActive: item ? item.active : false
@@ -137,9 +156,15 @@ Pane {
             width: parent.width
             z: 1
             function switchState() {
-                if (state == "hidden")
-                    form.focusTextField()
-                state = state == "hidden" ? "visible" : "hidden"
+                if (state == "visible") {
+                    state = "hidden"
+                    return
+                }
+                // The state follows keyboardActive, so the form only moves
+                // when the keyboard really opens
+                form.focusTextField()
+                item.activated = true
+                Qt.inputMethod.show()
             }
             states: [
                 State {

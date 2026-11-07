@@ -4,6 +4,9 @@
 ### Fixed
 - The virtual keyboard now types into the password field. Clicking the "Virtual Keyboard" button took the focus from the text field, so the keys went nowhere.
 - The virtual keyboard now opens when no text field has focus. Before, the button moved the form up but no keyboard appeared. The button now focuses the username field if it is empty, else the password field.
+- The virtual keyboard now works when SDDM runs on Wayland. SDDM does not load Qt Virtual Keyboard there, so the theme's keyboard either typed into nothing or did not open while the form moved up. On Wayland the button now asks KWin to show its keyboard (needs Plasma and an input method in KWin) and is hidden when no compositor keyboard is available.
+- The form only moves up when the keyboard really opens.
+- Typed text in a focused field is no longer nearly invisible. When the accent color has a contrast below 2:1 against the form color, the text uses the main text color. This changes the Screen Padding variants (light text on a light form); every other variant keeps its accent color.
 
 ### Removed
 - Removed the `Arabic Left` and `Arabic Right` release archives. The Examples section now shows Partial Blur with `Locale="ko_KR.UTF-8"` instead, and its values are in `Examples/` (not released as a theme).
